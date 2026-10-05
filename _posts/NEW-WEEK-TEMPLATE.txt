@@ -1,0 +1,10 @@
+Copy this to _posts/YYYY-MM-DD-week-3.md (the date in the file name AND in "date:" decides the order).
+
+---
+title: "Week 3 - Short title"
+date: 2026-10-12 12:00:00 +0000
+categories: [Thesis]
+tags: [programming]
+---
+
+What was done, problems, next week...

@@ -1,0 +1,26 @@
+<!-- Buttons at the bottom of a post. A button only exists if that post exists. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  {% assign previous = site.data.locales[include.lang].post.button.previous %}
+  {% assign next = site.data.locales[include.lang].post.button.next %}
+
+  {% if page.previous.url %}
+    <a
+      href="{{ site.baseurl }}{{ page.previous.url }}"
+      class="btn btn-outline-primary"
+      aria-label="{{ previous }}"
+    >
+      <p>{{ page.previous.title }}</p>
+    </a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a
+      href="{{ site.baseurl }}{{ page.next.url }}"
+      class="btn btn-outline-primary{% unless page.previous.url %} next-only{% endunless %}"
+      aria-label="{{ next }}"
+    >
+      <p>{{ page.next.title }}</p>
+    </a>
+  {% endif %}
+</nav>

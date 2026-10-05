@@ -1,0 +1,182 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ---------- Custom: dark green accent ---------- */
+
+/* light mode */
+:root[data-mode='light'] {
+  --link-color: #1f7a47;
+  --link-underline-color: #8fc9a8;
+  --toc-highlight: #1f7a47;
+  --checkbox-checked-color: #1f7a47;
+  --tag-hover: #d7ecdf;
+}
+
+/* dark mode */
+:root[data-mode='dark'] {
+  --link-color: #4fbf80;
+  --link-underline-color: #2f6e4c;
+  --toc-highlight: #4fbf80;
+  --checkbox-checked-color: #4fbf80;
+  --tag-hover: #1d3a2b;
+  --main-bg: #141517;
+  --sidebar-bg: #1a1b1e;
+  --card-bg: #1a1b1e;
+}
+
+/* no theme chosen: follows the system, so cover both */
+@media (prefers-color-scheme: light) {
+  :root:not([data-mode]) {
+    --link-color: #1f7a47;
+    --link-underline-color: #8fc9a8;
+    --toc-highlight: #1f7a47;
+    --checkbox-checked-color: #1f7a47;
+    --tag-hover: #d7ecdf;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mode]) {
+    --link-color: #4fbf80;
+    --link-underline-color: #2f6e4c;
+    --toc-highlight: #4fbf80;
+    --checkbox-checked-color: #4fbf80;
+    --tag-hover: #1d3a2b;
+    --main-bg: #141517;
+    --sidebar-bg: #1a1b1e;
+    --card-bg: #1a1b1e;
+  }
+}
+
+/* Green hover on the Previous/Next buttons (theme default is blue) */
+.btn.btn-outline-primary:not(.disabled):hover {
+  border-color: #277a4b !important;
+}
+
+/* A lone Next button (first week) sits on the right, with rounded corners */
+.post-navigation > .btn:only-child {
+  border-radius: 0.75rem !important;
+}
+.post-navigation > .btn.next-only {
+  margin-left: auto;
+}
+
+/* ---------- Custom: look inspired by the app ---------- */
+body,
+h1, h2, h3, h4, h5, h6,
+#sidebar .site-title {
+  font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
+}
+
+/* Sidebar: active link filled in green, rounded, like the app */
+#sidebar ul li.nav-item.active a.nav-link {
+  background-color: #277a4b;
+  color: #fff;
+}
+#sidebar ul li.nav-item a.nav-link {
+  border-radius: 10px;
+}
+
+/* Post cards */
+.card-wrapper.card {
+  border-radius: 16px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.card-wrapper.card:hover {
+  border-color: #277a4b;
+  transform: translateY(-2px);
+}
+
+/* Previous / Next: filled green buttons */
+.post-navigation .btn.btn-outline-primary {
+  background-color: #277a4b;
+  border-color: #277a4b;
+  border-radius: 16px;
+}
+.post-navigation .btn.btn-outline-primary p,
+.post-navigation .btn.btn-outline-primary:not(:hover) {
+  color: #fff !important;
+}
+.post-navigation .btn.btn-outline-primary::before {
+  color: rgb(255 255 255 / 75%) !important;
+}
+.post-navigation .btn.btn-outline-primary:hover {
+  background-color: #1b5535;
+  border-color: #1b5535 !important;
+}
+
+/* Landing area with big rounded buttons (like the app's Home screen) */
+.app-hero {
+  margin-bottom: 2.5rem;
+}
+.app-hero-eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--link-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.app-hero-title {
+  margin: 0 0 1.5rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.big-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.big-btn {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 150px;
+  padding: 1.3rem 1.6rem;
+  border-radius: 20px;
+  background: #277a4b;
+  color: #fff !important;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.big-btn.big-btn-main {
+  flex: 2;
+}
+.big-btn:hover {
+  background: #1b5535;
+  transform: translateY(-2px);
+}
+.big-btn-small {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+@media (max-width: 700px) {
+  .big-buttons {
+    flex-direction: column;
+  }
+  .big-btn {
+    flex: none;
+    min-height: 100px;
+    font-size: 1.5rem;
+  }
+}
