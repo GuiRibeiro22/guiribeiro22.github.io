@@ -26,10 +26,20 @@ layout: default
 </section>
 
 <h2 class="files-heading">Semanas</h2>
-<ol class="week-list">
+
+<div class="week-tools">
+  <label class="week-search">
+    <i class="fas fa-search"></i>
+    <input type="search" id="week-search" placeholder="Pesquisar nas semanas..." autocomplete="off">
+  </label>
+  <button type="button" id="week-sort" class="sort-btn">Mais antigas primeiro</button>
+</div>
+
+<ol class="week-list" id="week-list">
   {% for post in weeks %}
     {% assign m = post.date | date: "%-m" | minus: 1 %}
-    <li>
+    {% capture haystack %}{{ post.title }} {{ post.content | strip_html | strip_newlines }}{% endcapture %}
+    <li data-search="{{ haystack | downcase | normalize_whitespace | xml_escape }}">
       <a class="week-item" href="{{ post.url | relative_url }}">
         <span class="week-date">
           <b>{{ post.date | date: "%-d" }}</b>
@@ -46,3 +56,6 @@ layout: default
     <li class="text-muted">Ainda não há semanas publicadas.</li>
   {% endfor %}
 </ol>
+<p class="no-results" id="no-results">Nenhuma semana encontrada.</p>
+
+<script src="{{ '/assets/js/weeks.js' | relative_url }}" defer></script>

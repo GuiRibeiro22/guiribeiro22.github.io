@@ -331,3 +331,95 @@ h1, h2, h3, h4, h5, h6,
 #sidebar .site-title {
   font-size: 1.4rem;
 }
+
+/* ---------- Smaller buttons ---------- */
+.big-btn {
+  min-height: 84px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 16px;
+  font-size: 1.25rem;
+}
+.big-btn-small {
+  margin-bottom: 0.15rem;
+  font-size: 0.7rem;
+}
+.app-hero-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+@media (max-width: 700px) {
+  .big-btn {
+    min-height: 72px;
+    font-size: 1.15rem;
+  }
+}
+
+.post-navigation {
+  gap: 0.75rem;
+}
+.post-navigation .btn.btn-outline-primary {
+  width: auto !important;
+  max-width: 48%;
+  padding: 0.5rem 0.95rem;
+  border-radius: 12px !important;
+  text-align: left;
+}
+.post-navigation .btn.btn-outline-primary.next-only {
+  text-align: right;
+}
+.post-navigation .btn.btn-outline-primary p {
+  margin-top: 0.1rem;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+}
+
+/* ---------- Search + sort row on the home page ---------- */
+.week-tools {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.week-search {
+  position: relative;
+  flex: 1;
+}
+.week-search i {
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  transform: translateY(-50%);
+  color: var(--text-muted-color);
+  font-size: 0.85rem;
+}
+.week-search input {
+  width: 100%;
+  padding: 0.5rem 0.9rem 0.5rem 2.3rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+.week-search input:focus {
+  outline: none;
+  border-color: #277a4b;
+}
+.sort-btn {
+  flex-shrink: 0;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid #277a4b;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--link-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sort-btn:hover {
+  background: #277a4b;
+  color: #fff;
+}
+.no-results {
+  display: none;
+  color: var(--text-muted-color);
+}
