@@ -61,7 +61,7 @@
 
 /* Green hover on the Previous/Next buttons (theme default is blue) */
 .btn.btn-outline-primary:not(.disabled):hover {
-  border-color: #277a4b !important;
+  border-color: #184a2e !important;
 }
 
 /* A lone Next button (first week) sits on the right, with rounded corners */
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Sidebar: active link filled in green, rounded, like the app */
 #sidebar ul li.nav-item.active a.nav-link {
-  background-color: #277a4b;
+  background-color: #184a2e;
   color: #fff;
 }
 #sidebar ul li.nav-item a.nav-link {
@@ -94,14 +94,14 @@ h1, h2, h3, h4, h5, h6,
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .card-wrapper.card:hover {
-  border-color: #277a4b;
+  border-color: #184a2e;
   transform: translateY(-2px);
 }
 
 /* Previous / Next: filled green buttons */
 .post-navigation .btn.btn-outline-primary {
-  background-color: #277a4b;
-  border-color: #277a4b;
+  background-color: #184a2e;
+  border-color: #184a2e;
   border-radius: 16px;
 }
 .post-navigation .btn.btn-outline-primary p,
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6,
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .week-item:hover {
-  border-color: #277a4b !important;
+  border-color: #184a2e !important;
   transform: translateX(3px);
 }
 .week-date {
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6,
   width: 3.4rem;
   padding: 0.35rem 0;
   border-radius: 12px;
-  background: #277a4b;
+  background: #184a2e;
   color: #fff;
   line-height: 1.1;
 }
@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6,
   border-bottom: 1px solid var(--main-border-color) !important;
 }
 .file-item:hover {
-  border-color: #277a4b !important;
+  border-color: #184a2e !important;
 }
 .file-item > i:first-child {
   color: var(--link-color);
@@ -300,7 +300,7 @@ h1, h2, h3, h4, h5, h6,
 .file-ext {
   padding: 1px 10px;
   border-radius: 999px;
-  background: #277a4b;
+  background: #184a2e;
   color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
@@ -402,12 +402,12 @@ h1, h2, h3, h4, h5, h6,
 }
 .week-search input:focus {
   outline: none;
-  border-color: #277a4b;
+  border-color: #184a2e;
 }
 .sort-btn {
   flex-shrink: 0;
   padding: 0.5rem 0.95rem;
-  border: 1px solid #277a4b;
+  border: 1px solid #184a2e;
   border-radius: 12px;
   background: transparent;
   color: var(--link-color);
@@ -416,7 +416,7 @@ h1, h2, h3, h4, h5, h6,
   cursor: pointer;
 }
 .sort-btn:hover {
-  background: #277a4b;
+  background: #184a2e;
   color: #fff;
 }
 .no-results {
