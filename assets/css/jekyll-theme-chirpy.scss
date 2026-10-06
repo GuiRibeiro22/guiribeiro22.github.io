@@ -15,7 +15,7 @@
 /* ---------- Custom: dark green accent ---------- */
 
 /* light mode */
-:root[data-mode='light'] {
+:root[data-bs-theme='light'] {
   --link-color: #1f7a47;
   --link-underline-color: #8fc9a8;
   --toc-highlight: #1f7a47;
@@ -24,7 +24,7 @@
 }
 
 /* dark mode */
-:root[data-mode='dark'] {
+:root[data-bs-theme='dark'] {
   --link-color: #4fbf80;
   --link-underline-color: #2f6e4c;
   --toc-highlight: #4fbf80;
@@ -37,7 +37,7 @@
 
 /* no theme chosen: follows the system, so cover both */
 @media (prefers-color-scheme: light) {
-  :root:not([data-mode]) {
+  :root:not([data-bs-theme]) {
     --link-color: #1f7a47;
     --link-underline-color: #8fc9a8;
     --toc-highlight: #1f7a47;
@@ -47,7 +47,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-mode]) {
+  :root:not([data-bs-theme]) {
     --link-color: #4fbf80;
     --link-underline-color: #2f6e4c;
     --toc-highlight: #4fbf80;
@@ -318,4 +318,16 @@ h1, h2, h3, h4, h5, h6,
   height: 140px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+/* ---------- Sidebar: compact (the thesis title is already on the home page) ---------- */
+#sidebar .site-subtitle {
+  display: none;
+}
+#sidebar .profile-wrapper {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+#sidebar .site-title {
+  font-size: 1.4rem;
 }
