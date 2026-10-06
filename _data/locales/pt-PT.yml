@@ -1,0 +1,84 @@
+layout:
+  post: Publicação
+  category: Categoria
+  tag: Etiqueta
+
+tabs:
+  home: Início
+  categories: Categorias
+  tags: Etiquetas
+  archives: Arquivo
+  about: Sobre
+  ficheiros: Ficheiros
+
+search:
+  hint: pesquisar
+  cancel: Cancelar
+  no_results: Ups! Não foram encontrados resultados.
+
+panel:
+  lastmod: Atualizado recentemente
+  trending_tags: Etiquetas em destaque
+  toc: Conteúdo
+
+copyright:
+  license:
+    template: Esta publicação está licenciada sob :LICENSE_NAME pelo autor.
+    name: CC BY 4.0
+    link: https://creativecommons.org/licenses/by/4.0/
+
+  brief: Alguns direitos reservados.
+  verbose: >-
+    Salvo indicação em contrário, as publicações deste site estão licenciadas
+    sob a Licença Creative Commons Atribuição 4.0 Internacional (CC BY 4.0) pelo autor.
+
+meta: Feito com o tema :THEME para :PLATFORM.
+
+not_found:
+  statement: Desculpe, este endereço não existe ou aponta para algo que já não existe.
+
+notification:
+  update_found: Há novo conteúdo disponível
+  update: Atualizar
+
+theme:
+  light: Claro
+  dark: Escuro
+  system: Sistema
+
+post:
+  written_by: Por
+  posted: Publicado
+  updated: Atualizado
+  words: palavras
+  pageview_measure: visualizações
+  read_time:
+    unit: min
+    prompt: de leitura
+  edit: Editar esta publicação
+  relate_posts: Leitura adicional
+  share: Partilhar
+  button:
+    next: Seguinte
+    previous: Anterior
+    copy_code:
+      succeed: Copiado!
+    share_link:
+      title: Copiar ligação
+      succeed: Ligação copiada com sucesso!
+
+df:
+  post:
+    strftime: "%d/%m/%Y"
+    dayjs: "DD/MM/YYYY"
+  archives:
+    strftime: "%b"
+    dayjs: "MMM"
+
+categories:
+  category_measure:
+    singular: categoria
+    plural: categorias
+  post_measure:
+    singular: publicação
+    plural: publicações

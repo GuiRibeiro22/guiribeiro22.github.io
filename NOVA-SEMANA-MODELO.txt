@@ -1,0 +1,8 @@
+Copia isto para _posts/AAAA-MM-DD-semana-3.md  (a data do nome e do "date:" define a ordem; mais antigo fica em cima)
+
+---
+title: "Semana 3 – Título curto"
+date: 2026-10-12 12:00:00 +0000
+---
+
+Escreve aqui: o que foi feito, dificuldades, próxima semana...

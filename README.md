@@ -1,24 +1,10 @@
-# Thesis progress site (Chirpy theme, GitHub Pages)
+# Registo semanal da tese (GitHub Pages)
 
-Same theme as the example blog, with a dark green accent.
+## Nova semana
+No github.com abre `_posts` > **Add file > Create new file**, chama-lhe `AAAA-MM-DD-semana-N.md`,
+cola o cabeçalho de `NOVA-SEMANA-MODELO.txt`, escreve e faz **Commit**. O site atualiza em ~1 minuto.
+As semanas aparecem da mais antiga para a mais recente.
 
-## Publish (once)
-1. Create a GitHub repo named `<username>.github.io` and push this folder to it.
-2. In `_config.yml` set `url: "https://<username>.github.io"`, `github.username`, your email and social links.
-3. Repo **Settings > Pages > Build and deployment > Source: GitHub Actions**. The included workflow builds and deploys on every push.
-
-## Every week (no installs needed)
-On github.com open your repo, go to `_posts`, click **Add file > Create new file**, name it
-`YYYY-MM-DD-week-N.md`, paste the header from `_posts/NEW-WEEK-TEMPLATE.txt`, write the post and click **Commit**.
-The site updates by itself in about a minute. Drag and drop images into `assets/img/` the same way.
-
-## Share with your supervisor
-Send him `https://<username>.github.io`. (Free GitHub Pages needs a public repository.)
-
-## Details
-Add `_posts/YYYY-MM-DD-week-N.md` (see `_posts/NEW-WEEK-TEMPLATE.txt`) and push.
-At the bottom of each week, a **Next** button only appears if a newer week exists and a
-**Previous** button only if an older one exists. The order follows the dates.
-
-## Look
-Green colours live in `assets/css/jekyll-theme-chirpy.scss`. To force dark mode (no toggle) set `theme_mode: dark` in `_config.yml`.
+## Ficheiros e fotos para o orientador
+Em `assets/files` > **Add file > Upload files**. Tudo o que lá estiver aparece no separador **Ficheiros**
+(imagens em "Fotografias", o resto em "Documentos").
